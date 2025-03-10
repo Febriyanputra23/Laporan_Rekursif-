@@ -11,7 +11,7 @@ int pascal(int row, int col) {
 }
 
 // Fungsi untuk mencetak segitiga Pascal
-void printPascalTriangle(int numRows) {
+void printSegitigaPascal(int numRows) {
   for (int i = 0; i < numRows; i++) {
     // Menambahkan spasi untuk membuat segitiga simetris
     String spaces = ' ' * (numRows - i) * 2;
@@ -26,8 +26,8 @@ void printPascalTriangle(int numRows) {
 
 void main() {
   // Jumlah baris segitiga Pascal yang ingin dicetak
-  int numRows = 6;
+  int numRows = 5;
 
   // Memanggil fungsi untuk mencetak segitiga Pascal
-  printPascalTriangle(numRows);
+  printSegitigaPascal(numRows);
 }
