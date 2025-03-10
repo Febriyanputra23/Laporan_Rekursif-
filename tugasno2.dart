@@ -1,24 +1,16 @@
+// Fungsi rekursi untuk menampilkan kombinasi 3 karakter
 import 'dart:io';
 
-// Fungsi rekursif untuk membuat dan mencetak semua kombinasi karakter dari charset
-void buatKombinasi(String charset, String current, int length) {
-  // jika panjang string saat ini sudah sesuai dengan N, cetak hasil
-  if (current.length == length) {
-    stdout.write("$current ");
-    return;
-  }
-
-  // Loop untuk menambahkan karakter berikutnya dari charset
-  for (int i = 0; i < charset.length; i++) {
-    buatKombinasi(charset, current + charset[i], length);
+void charCombination(String a, int n) {
+  if (n == 0) {
+    stdout.write("$a ");
+  } else {
+    for (int i = 97; i < 100; i++) {
+      charCombination(a + String.fromCharCode(i), n - 1);
+    }
   }
 }
 
 void main() {
-  stdout.write("Masukkan jumlah karakter (N): ");
-  int N = int.parse(stdin.readLineSync()!);
-  String charset = "abc"; // Karakter yang digunakan dalam kombinasi
-
-  print("\nSemua kombinasi yang mungkin:");
-  buatKombinasi(charset, "", N);
+  charCombination("", 3);
 }
