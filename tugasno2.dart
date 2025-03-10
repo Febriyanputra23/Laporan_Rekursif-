@@ -1,7 +1,8 @@
 import 'dart:io';
 
+// Fungsi rekursif untuk membuat dan mencetak semua kombinasi karakter dari charset
 void buatKombinasi(String charset, String current, int length) {
-  // Basis rekursi: jika panjang string saat ini sudah sesuai dengan N, cetak hasil
+  // jika panjang string saat ini sudah sesuai dengan N, cetak hasil
   if (current.length == length) {
     stdout.write("$current ");
     return;
